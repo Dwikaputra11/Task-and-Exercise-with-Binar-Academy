@@ -14,10 +14,37 @@
         android:theme="@style/Theme.Chapter3"
         tools:targetApi="31">
         <activity
-            android:name=".NilaiAkhirMahasiswa"
+            android:name=".topic1.HasilNilai"
             android:exported="false" />
         <activity
-            android:name=".BMI_Calculator"
+            android:name=".topic1.HasilBMI"
+            android:exported="false" />
+        <activity
+            android:name=".topic2.SerialParcel"
+            android:exported="false" />
+        <activity
+            android:name=".topic2.BundleExam"
+            android:exported="false" />
+        <activity
+            android:name=".topic2.IntentExam"
+            android:exported="false" />
+        <activity
+            android:name=".topic2.CobaBundle1"
+            android:exported="false" />
+        <activity
+            android:name=".topic2.Topic2"
+            android:exported="false" />
+        <activity
+            android:name=".topic1.Calculator"
+            android:exported="false" />
+        <activity
+            android:name=".topic1.Topic1"
+            android:exported="false" />
+        <activity
+            android:name=".topic1.NilaiAkhirMahasiswa"
+            android:exported="false" />
+        <activity
+            android:name=".topic1.BMICalculator"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

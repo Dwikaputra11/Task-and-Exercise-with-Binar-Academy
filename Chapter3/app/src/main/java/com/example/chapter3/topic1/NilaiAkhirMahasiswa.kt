@@ -1,15 +1,21 @@
-package com.example.chapter3
+package com.example.chapter3.topic1
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Parcelable
 import android.util.Log
 import android.view.View
+import com.example.chapter3.data.MahasiswaParcel
+import com.example.chapter3.data.MahasiswaSerial
 import com.example.chapter3.databinding.ActivityNilaiAkhirMahasiswaBinding
 import com.google.android.material.snackbar.Snackbar
 
 class NilaiAkhirMahasiswa : AppCompatActivity() {
 
     private lateinit var binding: ActivityNilaiAkhirMahasiswaBinding
+    private var nama: String = ""
+    private var nim: String = ""
     private var total = 0
     private var mean = 0
     private var nilaiHuruf = ""
@@ -21,14 +27,18 @@ class NilaiAkhirMahasiswa : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityNilaiAkhirMahasiswaBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        binding.btnHitung.setOnClickListener {
+        val intent = Intent(this, HasilNilai::class.java)
+        binding.btnHitungNilai.setOnClickListener {
             if(isValid()){
                 nilaiUas = binding.etUas.text.toString().toInt()
                 nilaiTugas = binding.etTugas.text.toString().toInt()
                 nilaiUts = binding.etUts.text.toString().toInt()
+                nama = binding.etNama.text.toString()
+                nim = binding.etNim.text.toString()
                 hitung()
-                lihatHasil()
+                setParcelData(intent)
+                setSerialData(intent)
+                startActivity(intent)
             }else{
                 Snackbar.make(binding.root,"Input Tidak Valid",Snackbar.LENGTH_SHORT).show()
             }
@@ -72,30 +82,17 @@ class NilaiAkhirMahasiswa : AppCompatActivity() {
         }).toString()
     }
 
-    fun lihatHasil(){
-        binding.llHasil.visibility = View.VISIBLE
-        binding.tvNama.text = "Nama Mahasiswa: ${binding.etNama.text.toString()}"
-        binding.tvNim.text = "NIM: ${binding.etNim.text.toString()}"
-        binding.tvUas.text = "UAS: ${binding.etUas.text.toString()}"
-        binding.tvUts.text = "UTS: ${binding.etUts.text.toString()}"
-        binding.tvTugas.text = "Tugas: ${binding.etTugas.text.toString()}"
-        binding.tvTotalNilai.text = "Total Nilai: $total"
-        binding.tvMean.text = "Rata-rata Nilai: $mean"
-        binding.tvNilaiHuruf.text = "Nilai Huruf: $nilaiHuruf"
-        binding.tvStatus.text = "Status: $status"
+    fun setParcelData(intent: Intent){
+        val dataMahasiswa = MahasiswaParcel(nama = nama, nim = nim, uas = nilaiUas, uts = nilaiUts, tugas = nilaiTugas)
+        intent.putExtra(HasilNilai.DATA_PARCEL, dataMahasiswa)
+    }
+
+    fun setSerialData(intent: Intent){
+        val dataMahasiswa = MahasiswaSerial(total = total, nilaiHuruf = nilaiHuruf, rataRata = mean, status = status)
+        intent.putExtra(HasilNilai.DATA_SERIAL,dataMahasiswa)
     }
 
     fun resetData(){
-        binding.llHasil.visibility = View.GONE
-        binding.tvNama.text = "Nama Mahasiswa: "
-        binding.tvNim.text = "NIM: "
-        binding.tvUas.text = "UAS: "
-        binding.tvUts.text = "UTS: "
-        binding.tvTugas.text = "Tugas: "
-        binding.tvTotalNilai.text = "Total Nilai: "
-        binding.tvMean.text = "Rata-rata Nilai: "
-        binding.tvNilaiHuruf.text = "Nilai Huruf: "
-        binding.tvStatus.text = "Status: "
         binding.etUts.text.clear()
         binding.etNama.text.clear()
         binding.etUas.text.clear()

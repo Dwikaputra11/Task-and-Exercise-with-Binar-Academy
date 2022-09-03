@@ -3,46 +3,26 @@ package com.example.chapter3
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
+import com.example.chapter3.databinding.ActivityMainBinding
+import com.example.chapter3.topic1.Topic1
+import com.example.chapter3.topic2.Topic2
 
 class MainActivity : AppCompatActivity() {
-    lateinit var etNumOne: EditText
-    lateinit var etNumTwo: EditText
-    lateinit var btnCalculate: Button
-    lateinit var btnReset: Button
-    lateinit var tvResult: TextView
-    lateinit var btnNextPage: Button
+    lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        config()
-        btnCalculate.setOnClickListener {
-            calculate()
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        binding.btnTopicDua.setOnClickListener {
+            val intent = Intent(this, Topic2::class.java)
+            startActivity(intent)
         }
-        btnReset.setOnClickListener {
-            tvResult.text = "Result: "
-            etNumOne.text.clear()
-            etNumTwo.text.clear()
-        }
-        btnNextPage.setOnClickListener {
-            val intent = Intent(this, BMI_Calculator::class.java)
+        binding.btnTopicSatu.setOnClickListener {
+            val intent = Intent(this, Topic1::class.java)
             startActivity(intent)
         }
     }
 
-    private fun config(){
-        etNumOne = findViewById(R.id.et_num_one)
-        etNumTwo = findViewById(R.id.et_num_two)
-        btnCalculate = findViewById(R.id.btn_calculate)
-        tvResult = findViewById(R.id.tv_result)
-        btnReset = findViewById(R.id.btn_reset)
-        btnNextPage = findViewById(R.id.btn_next)
-    }
-    private fun calculate(){
-        var numberOne:Int = etNumOne.text.toString().toInt()
-        var numberTwo:Int = etNumTwo.text.toString().toInt()
-        tvResult.text = "Result: ${numberOne + numberTwo}"
-    }
+
 }

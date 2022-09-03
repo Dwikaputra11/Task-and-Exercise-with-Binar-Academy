@@ -4,28 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
+    tools:context=".topic2.IntentExam">
 
     <Button
-        android:id="@+id/btn_topic_satu"
+        android:id="@+id/btn_gallery"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Topic 1"
+        android:text="Gallery"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.424" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btn_topic_dua"
+        android:id="@+id/btn_camera"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="Topic 2"
-        app:layout_constraintEnd_toEndOf="@+id/btn_topic_satu"
-        app:layout_constraintStart_toStartOf="@+id/btn_topic_satu"
-        app:layout_constraintTop_toBottomOf="@+id/btn_topic_satu" />
+        android:text="Camera"
+        app:layout_constraintEnd_toEndOf="@+id/btn_gallery"
+        app:layout_constraintStart_toStartOf="@+id/btn_gallery"
+        app:layout_constraintTop_toBottomOf="@+id/btn_gallery" />
 </androidx.constraintlayout.widget.ConstraintLayout>
