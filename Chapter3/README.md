@@ -1,2 +1,2 @@
-# Tugas Topic 2
-<p>Untuk Tugas Topic berada di folder topic 1 dengan hasil navigasinya pada HasilBMI dan Hasil Nilai</p>
+# Tugas Topic 4
+<p>Untuk Tugas Topic 4 berada di package topic 4 pada java folder</p>
