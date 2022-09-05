@@ -11,15 +11,38 @@
         <entry key="..\:/dev/AndroidStudioProjects/Binar Academy/Tugas dan Latihan/Chapter3/app/src/main/res/layout/activity_calculator.xml" value="0.22735507246376813" />
         <entry key="..\:/dev/AndroidStudioProjects/Binar Academy/Tugas dan Latihan/Chapter3/app/src/main/res/layout/activity_coba_bundle1.xml" value="0.22735507246376813" />
         <entry key="..\:/dev/AndroidStudioProjects/Binar Academy/Tugas dan Latihan/Chapter3/app/src/main/res/layout/activity_coba_parcelable.xml" value="0.264" />
+        <entry key="..\:/dev/AndroidStudioProjects/Binar Academy/Tugas dan Latihan/Chapter3/app/src/main/res/layout/activity_gojek.xml" value="0.1" />
         <entry key="..\:/dev/AndroidStudioProjects/Binar Academy/Tugas dan Latihan/Chapter3/app/src/main/res/layout/activity_hasil_bmi.xml" value="0.4" />
         <entry key="..\:/dev/AndroidStudioProjects/Binar Academy/Tugas dan Latihan/Chapter3/app/src/main/res/layout/activity_hasil_nilai.xml" value="0.4" />
         <entry key="..\:/dev/AndroidStudioProjects/Binar Academy/Tugas dan Latihan/Chapter3/app/src/main/res/layout/activity_intent.xml" value="0.22735507246376813" />
+        <entry key="..\:/dev/AndroidStudioProjects/Binar Academy/Tugas dan Latihan/Chapter3/app/src/main/res/layout/activity_latihan_fragment.xml" value="0.2" />
+        <entry key="..\:/dev/AndroidStudioProjects/Binar Academy/Tugas dan Latihan/Chapter3/app/src/main/res/layout/activity_login.xml" value="0.25677083333333334" />
         <entry key="..\:/dev/AndroidStudioProjects/Binar Academy/Tugas dan Latihan/Chapter3/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/dev/AndroidStudioProjects/Binar Academy/Tugas dan Latihan/Chapter3/app/src/main/res/layout/activity_navigation.xml" value="0.25677083333333334" />
         <entry key="..\:/dev/AndroidStudioProjects/Binar Academy/Tugas dan Latihan/Chapter3/app/src/main/res/layout/activity_nilai_akhir_mahasiswa.xml" value="0.22735507246376813" />
         <entry key="..\:/dev/AndroidStudioProjects/Binar Academy/Tugas dan Latihan/Chapter3/app/src/main/res/layout/activity_parcelable_exam.xml" value="0.2" />
         <entry key="..\:/dev/AndroidStudioProjects/Binar Academy/Tugas dan Latihan/Chapter3/app/src/main/res/layout/activity_serializable_exam.xml" value="0.22735507246376813" />
         <entry key="..\:/dev/AndroidStudioProjects/Binar Academy/Tugas dan Latihan/Chapter3/app/src/main/res/layout/activity_topic1.xml" value="0.22735507246376813" />
         <entry key="..\:/dev/AndroidStudioProjects/Binar Academy/Tugas dan Latihan/Chapter3/app/src/main/res/layout/activity_topic2.xml" value="0.22735507246376813" />
+        <entry key="..\:/dev/AndroidStudioProjects/Binar Academy/Tugas dan Latihan/Chapter3/app/src/main/res/layout/activity_topic3.xml" value="0.22735507246376813" />
+        <entry key="..\:/dev/AndroidStudioProjects/Binar Academy/Tugas dan Latihan/Chapter3/app/src/main/res/layout/fragment_calculate.xml" value="0.25677083333333334" />
+        <entry key="..\:/dev/AndroidStudioProjects/Binar Academy/Tugas dan Latihan/Chapter3/app/src/main/res/layout/fragment_chat.xml" value="0.1" />
+        <entry key="..\:/dev/AndroidStudioProjects/Binar Academy/Tugas dan Latihan/Chapter3/app/src/main/res/layout/fragment_contact_nav.xml" value="0.25677083333333334" />
+        <entry key="..\:/dev/AndroidStudioProjects/Binar Academy/Tugas dan Latihan/Chapter3/app/src/main/res/layout/fragment_dua.xml" value="0.22735507246376813" />
+        <entry key="..\:/dev/AndroidStudioProjects/Binar Academy/Tugas dan Latihan/Chapter3/app/src/main/res/layout/fragment_forget_pass_nav.xml" value="0.25677083333333334" />
+        <entry key="..\:/dev/AndroidStudioProjects/Binar Academy/Tugas dan Latihan/Chapter3/app/src/main/res/layout/fragment_help_nav.xml" value="0.25677083333333334" />
+        <entry key="..\:/dev/AndroidStudioProjects/Binar Academy/Tugas dan Latihan/Chapter3/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/dev/AndroidStudioProjects/Binar Academy/Tugas dan Latihan/Chapter3/app/src/main/res/layout/fragment_home_nav.xml" value="0.264" />
+        <entry key="..\:/dev/AndroidStudioProjects/Binar Academy/Tugas dan Latihan/Chapter3/app/src/main/res/layout/fragment_login_nav.xml" value="0.25" />
+        <entry key="..\:/dev/AndroidStudioProjects/Binar Academy/Tugas dan Latihan/Chapter3/app/src/main/res/layout/fragment_nav_dua.xml" value="0.25677083333333334" />
+        <entry key="..\:/dev/AndroidStudioProjects/Binar Academy/Tugas dan Latihan/Chapter3/app/src/main/res/layout/fragment_nav_satu.xml" value="0.24270833333333333" />
+        <entry key="..\:/dev/AndroidStudioProjects/Binar Academy/Tugas dan Latihan/Chapter3/app/src/main/res/layout/fragment_nav_tiga.xml" value="0.25677083333333334" />
+        <entry key="..\:/dev/AndroidStudioProjects/Binar Academy/Tugas dan Latihan/Chapter3/app/src/main/res/layout/fragment_profile.xml" value="0.1" />
+        <entry key="..\:/dev/AndroidStudioProjects/Binar Academy/Tugas dan Latihan/Chapter3/app/src/main/res/layout/fragment_profile_nav.xml" value="0.1" />
+        <entry key="..\:/dev/AndroidStudioProjects/Binar Academy/Tugas dan Latihan/Chapter3/app/src/main/res/layout/fragment_promo.xml" value="0.1" />
+        <entry key="..\:/dev/AndroidStudioProjects/Binar Academy/Tugas dan Latihan/Chapter3/app/src/main/res/layout/fragment_register_nav.xml" value="0.176" />
+        <entry key="..\:/dev/AndroidStudioProjects/Binar Academy/Tugas dan Latihan/Chapter3/app/src/main/res/layout/fragment_satu.xml" value="0.22735507246376813" />
+        <entry key="..\:/dev/AndroidStudioProjects/Binar Academy/Tugas dan Latihan/Chapter3/app/src/main/res/menu/menu_navigation.xml" value="0.1" />
       </map>
     </option>
   </component>

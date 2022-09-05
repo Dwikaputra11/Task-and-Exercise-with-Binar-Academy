@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/fragmentNavSatu2">
+
+    <fragment
+        android:id="@+id/fragmentNavDua"
+        android:name="com.example.chapter3.topic4.fragmentNavDua"
+        android:label="fragment_nav_dua"
+        tools:layout="@layout/fragment_nav_dua" >
+        <action
+            android:id="@+id/action_fragmentNavDua_to_fragmentNavTiga"
+            app:destination="@id/fragmentNavTiga" />
+        <action
+            android:id="@+id/action_fragmentNavDua_to_fragmentNavSatu22"
+            app:destination="@id/fragmentNavSatu2" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentNavTiga"
+        android:name="com.example.chapter3.topic4.FragmentNavTiga"
+        android:label="fragment_nav_tiga"
+        tools:layout="@layout/fragment_nav_tiga" >
+        <action
+            android:id="@+id/action_fragmentNavTiga_to_fragmentNavSatu22"
+            app:destination="@id/fragmentNavSatu2" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentNavSatu2"
+        android:name="com.example.chapter3.topic4.FragmentNavSatu"
+        android:label="fragment_nav_satu"
+        tools:layout="@layout/fragment_nav_satu" >
+        <action
+            android:id="@+id/action_fragmentNavSatu2_to_fragmentNavDua"
+            app:destination="@id/fragmentNavDua" />
+    </fragment>
+</navigation>

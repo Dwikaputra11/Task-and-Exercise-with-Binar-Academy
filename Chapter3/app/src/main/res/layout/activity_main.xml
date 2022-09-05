@@ -14,10 +14,9 @@
         android:text="Topic 1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.424" />
+        app:layout_constraintVertical_bias="0.373" />
 
     <Button
         android:id="@+id/btn_topic_dua"
@@ -28,4 +27,24 @@
         app:layout_constraintEnd_toEndOf="@+id/btn_topic_satu"
         app:layout_constraintStart_toStartOf="@+id/btn_topic_satu"
         app:layout_constraintTop_toBottomOf="@+id/btn_topic_satu" />
+
+    <Button
+        android:id="@+id/btn_topic_tiga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Topic 3"
+        app:layout_constraintEnd_toEndOf="@+id/btn_topic_dua"
+        app:layout_constraintStart_toStartOf="@+id/btn_topic_dua"
+        app:layout_constraintTop_toBottomOf="@+id/btn_topic_dua" />
+
+    <Button
+        android:id="@+id/btnTopic4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Topic4"
+        app:layout_constraintEnd_toEndOf="@+id/btn_topic_tiga"
+        app:layout_constraintStart_toStartOf="@+id/btn_topic_tiga"
+        app:layout_constraintTop_toBottomOf="@+id/btn_topic_tiga" />
 </androidx.constraintlayout.widget.ConstraintLayout>

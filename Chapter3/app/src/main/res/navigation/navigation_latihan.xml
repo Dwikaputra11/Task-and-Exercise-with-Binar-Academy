@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_latihan"
+    app:startDestination="@id/loginNavFragment">
+
+    <fragment
+        android:id="@+id/loginNavFragment"
+        android:name="com.example.chapter3.topic4.latihan.LoginNavFragment"
+        android:label="fragment_login_nav"
+        tools:layout="@layout/fragment_login_nav" >
+        <action
+            android:id="@+id/action_loginNavFragment_to_contactNavFragment"
+            app:destination="@id/contactNavFragment" />
+        <action
+            android:id="@+id/action_loginNavFragment_to_helpNavFragment"
+            app:destination="@id/helpNavFragment" />
+        <action
+            android:id="@+id/action_loginNavFragment_to_homeNavFragment"
+            app:destination="@id/homeNavFragment" />
+        <action
+            android:id="@+id/action_loginNavFragment_to_forgetPassNavFragment"
+            app:destination="@id/forgetPassNavFragment" />
+        <action
+            android:id="@+id/action_loginNavFragment_to_registerNavFragment"
+            app:destination="@id/registerNavFragment" />
+        <argument
+            android:name="user_name"
+            app:argType="string" />
+        <argument
+            android:name="password"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/contactNavFragment"
+        android:name="com.example.chapter3.topic4.latihan.ContactNavFragment"
+        android:label="fragment_contact_nav"
+        tools:layout="@layout/fragment_contact_nav" />
+    <fragment
+        android:id="@+id/helpNavFragment"
+        android:name="com.example.chapter3.topic4.latihan.HelpNavFragment"
+        android:label="fragment_help_nav"
+        tools:layout="@layout/fragment_help_nav" />
+    <fragment
+        android:id="@+id/homeNavFragment"
+        android:name="com.example.chapter3.topic4.latihan.HomeNavFragment"
+        android:label="fragment_home_nav"
+        tools:layout="@layout/fragment_home_nav" >
+        <argument
+            android:name="user_name"
+            app:argType="string" />
+        <argument android:name="password"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_homeNavFragment_to_calculateFragment"
+            app:destination="@id/calculateFragment" />
+        <action
+            android:id="@+id/action_homeNavFragment_to_profileNavFragment"
+            app:destination="@id/profileNavFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forgetPassNavFragment"
+        android:name="com.example.chapter3.topic4.latihan.ForgetPassNavFragment"
+        android:label="fragment_forget_pass_nav"
+        tools:layout="@layout/fragment_forget_pass_nav" />
+    <fragment
+        android:id="@+id/registerNavFragment"
+        android:name="com.example.chapter3.topic4.latihan.RegisterNavFragment"
+        android:label="fragment_register_nav"
+        tools:layout="@layout/fragment_register_nav" >
+        <action
+            android:id="@+id/action_registerNavFragment_to_loginNavFragment"
+            app:destination="@id/loginNavFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/calculateFragment"
+        android:name="com.example.chapter3.topic4.latihan.CalculateFragment"
+        android:label="fragment_calculate"
+        tools:layout="@layout/fragment_calculate" >
+        <argument
+            android:name="user_name"
+            app:argType="string" />
+        <argument
+            android:name="birth_year"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileNavFragment"
+        android:name="com.example.chapter3.topic4.latihan.ProfileNavFragment"
+        android:label="fragment_profile_nav"
+        tools:layout="@layout/fragment_profile_nav" >
+        <argument
+            android:name="user_name"
+            app:argType="string" />
+    </fragment>
+</navigation>
