@@ -3,6 +3,7 @@ package com.example.chapter3.topic5.latihan
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.LinearLayout
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.chapter3.R
 import kotlinx.android.synthetic.main.activity_recycler.*
@@ -30,7 +31,8 @@ class RecyclerActivity : AppCompatActivity() {
 
         val adapter = ContactAdapter()
         adapter.submitData(listContact)
-        val layoutManager = LinearLayoutManager(this,LinearLayoutManager.VERTICAL, false)
+//        val layoutManager = GridLayoutManager(this,2,GridLayoutManager.VERTICAL, false)
+        val layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false)
         rvContactView.layoutManager = layoutManager
         rvContactView.adapter = adapter
     }
