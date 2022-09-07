@@ -9,6 +9,7 @@ import com.example.chapter3.topic2.Topic2
 import com.example.chapter3.topic3.Topic3
 import com.example.chapter3.topic4.NavigationActivity
 import com.example.chapter3.topic4.latihan.LoginActivity
+import com.example.chapter3.topic5.latihan.RecyclerActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -32,6 +33,10 @@ class MainActivity : AppCompatActivity() {
         }
         btnTopic4.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
+        btnTopic5.setOnClickListener {
+            val intent = Intent(this, RecyclerActivity::class.java)
             startActivity(intent)
         }
     }
