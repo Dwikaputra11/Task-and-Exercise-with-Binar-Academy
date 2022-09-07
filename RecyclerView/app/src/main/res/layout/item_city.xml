@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="4dp"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageView
+            android:id="@+id/ivCityImage"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_launcher_foreground"
+            android:scaleType="centerCrop"
+            />
+        <TextView
+            android:paddingTop="10dp"
+            android:paddingStart="10dp"
+            android:id="@+id/tvCityName"
+            android:layout_below="@id/ivCityImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama Student"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/tvCityCapital"
+            android:paddingStart="10dp"
+            android:text="12923"
+            android:textSize="24sp"
+            android:layout_below="@id/tvCityName"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
