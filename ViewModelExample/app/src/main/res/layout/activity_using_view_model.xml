@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UsingViewModel">
+
+    <EditText
+        android:id="@+id/etPanjang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Panjang"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.126" />
+
+    <EditText
+        android:id="@+id/etLebar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Lebar"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/etPanjang"
+        app:layout_constraintStart_toStartOf="@+id/etPanjang"
+        app:layout_constraintTop_toBottomOf="@+id/etPanjang" />
+
+    <Button
+        android:id="@+id/btnHitungVolume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Hitung"
+        app:layout_constraintEnd_toEndOf="@+id/etTinggi"
+        app:layout_constraintStart_toStartOf="@+id/etTinggi"
+        app:layout_constraintTop_toBottomOf="@+id/etTinggi" />
+
+    <EditText
+        android:id="@+id/etTinggi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Tinggi"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/etLebar"
+        app:layout_constraintStart_toStartOf="@+id/etLebar"
+        app:layout_constraintTop_toBottomOf="@+id/etLebar" />
+
+    <TextView
+        android:id="@+id/tvHasil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Hasil"
+        app:layout_constraintEnd_toEndOf="@+id/btnHitungVolume"
+        app:layout_constraintStart_toStartOf="@+id/btnHitungVolume"
+        app:layout_constraintTop_toBottomOf="@+id/btnHitungVolume" />
+</androidx.constraintlayout.widget.ConstraintLayout>

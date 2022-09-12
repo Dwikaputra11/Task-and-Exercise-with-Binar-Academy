@@ -7,6 +7,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
+    lateinit var adapterCityDiff: CityAdapterDiff
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -73,5 +76,20 @@ class MainActivity : AppCompatActivity() {
         rvStudentList.adapter = adapter
         rvStudentList.layoutManager = layoutManager
 
+        fabUpdateNoDIff.setOnClickListener{
+            listCity[2] = CityItem(name = "Bali", capital = "Denpasar", R.drawable.bali_gapura_candi_bentar)
+            listCity[0] = CityItem("Jawa TImur", "Surabaya", R.drawable.jawa_timur_rumah_joglo)
+            val adapter = CityAdapter(listCity)
+            rvStudentList.adapter = adapter
+            adapter.notifyDataSetChanged()
+        }
+
+        fabUpdateDiff.setOnClickListener{
+            listCity[2] = CityItem(name = "Bali", capital = "Denpasar", R.drawable.bali_gapura_candi_bentar)
+            listCity[0] = CityItem("Jawa TImur", "Surabaya", R.drawable.jawa_timur_rumah_joglo)
+            adapterCityDiff = CityAdapterDiff()
+            rvStudentList.adapter = adapterCityDiff
+            adapterCityDiff.submitData(listCity)
+        }
     }
 }

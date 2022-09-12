@@ -5,9 +5,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.recyclerview.widget.AsyncListDiffer
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 
 class CityAdapter(private val listCity: ArrayList<CityItem>): RecyclerView.Adapter<CityAdapter.ViewHolder>() {
+
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         val name = itemView.findViewById<TextView>(R.id.tvCityName)
         val capital = itemView.findViewById<TextView>(R.id.tvCityCapital)
@@ -21,7 +24,7 @@ class CityAdapter(private val listCity: ArrayList<CityItem>): RecyclerView.Adapt
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.name.text = listCity[position].name
-        holder.capital.text = listCity[position].capital
+        holder.capital.text = listCity[position].name
         holder.img.setImageResource(listCity[position].img)
     }
 
