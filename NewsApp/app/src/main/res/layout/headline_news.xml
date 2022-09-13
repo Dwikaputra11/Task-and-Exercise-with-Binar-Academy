@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="10dp"
-    android:layout_margin="10dp"
-    app:cardElevation="4dp"
-    android:layout_width="match_parent"
+    android:layout_gravity="center_horizontal"
     android:layout_height="wrap_content">
 
     <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="wrap_content">
         <ImageView
-            android:id="@+id/ivNews"
+            android:id="@+id/ivHeadline"
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:scaleType="centerCrop"
+            android:layout_height="150dp"
             android:src="@mipmap/ic_launcher_round"
+            android:scaleType="centerCrop"
             />
         <LinearLayout
             android:padding="10dp"
@@ -25,7 +24,7 @@
             android:layout_height="wrap_content">
             <TextView
                 android:paddingVertical="10dp"
-                android:id="@+id/tvTitleNews"
+                android:id="@+id/tvTitleHeadline"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Title"
@@ -33,19 +32,20 @@
                 android:textSize="24sp"
                 />
             <TextView
-                android:id="@+id/tvContent"
+                android:id="@+id/tvContentHeadline"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Description"
+                android:maxEms="25"
                 />
             <TextView
-                android:id="@+id/tvEditor"
+                android:id="@+id/tvEditorHeadline"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="penulis"
                 />
             <TextView
-                android:id="@+id/tvDate"
+                android:id="@+id/tvDateHeadline"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="dd/MM/YY"
@@ -59,7 +59,6 @@
                 android:background="@drawable/rect_radius"
                 />
         </LinearLayout>
-
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

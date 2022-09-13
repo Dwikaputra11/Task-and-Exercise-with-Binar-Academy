@@ -32,6 +32,7 @@ class NewsAdapter(private var newsList:  ArrayList<News>): RecyclerView.Adapter<
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        // use glide library to load image using url
         Glide.with(context)
             .load(newsList[position].imgUrl)
             .placeholder(R.drawable.ic_launcher_background)
