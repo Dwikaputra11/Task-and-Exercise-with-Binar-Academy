@@ -1,5 +1,6 @@
 package com.example.newsapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.Observer
@@ -24,16 +25,25 @@ class MainActivity : AppCompatActivity() {
 
         newsVM = ViewModelProvider(this)[NewsViewModel::class.java]
         newsVM.getNewsData()
+        newsVM.getHeadlinesData()
         newsVM.newsListLiveData.observe(this, Observer {
             newsAdapter.setNewsData(it as ArrayList<News>)
+        })
+        newsVM.headlineListLiveData.observe(this, Observer {
+            viewPagerAdapter.setHeadlineNewsData(it as ArrayList<News>)
         })
     }
 
     private fun setView(){
-        viewPagerAdapter = HeadlineViewPager(this)
+        viewPagerAdapter = HeadlineViewPager(ArrayList())
         vpHeadline.orientation = ViewPager2.ORIENTATION_HORIZONTAL
         vpHeadline.offscreenPageLimit = 3
         vpHeadline.adapter = viewPagerAdapter
+        viewPagerAdapter.setOnItemClickListener(object: HeadlineViewPager.OnItemClickListener{
+            override fun onItemClick(id: Int) {
+                moveToContentNews(id, "headline")
+            }
+        })
         vpHeadline.setPageTransformer(MarginPageTransformer(50))
         vpHeadline.clipToPadding = false;
         vpHeadline.setPadding(10,10,10,0);
@@ -41,5 +51,25 @@ class MainActivity : AppCompatActivity() {
         newsAdapter = NewsAdapter(ArrayList())
         rvNews.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         rvNews.adapter = newsAdapter
+        newsAdapter.setOnItemClickListener(object : NewsAdapter.OnItemClickListener{
+            override fun onItemClick(id: Int) {
+                moveToContentNews(id, "news")
+            }
+        })
+    }
+
+    fun moveToContentNews(id: Int, key_word:String ){
+        val newsContent = if(key_word == "headline"){
+            newsVM.headlineListLiveData.value?.first{
+                it.id == id
+            } as News
+        }else{
+            newsVM.newsListLiveData.value?.first {
+                it.id == id
+            } as News
+        }
+        val intent = Intent(this@MainActivity, NewsContentActivity::class.java)
+        intent.putExtra(NewsContentActivity.NEWS_CONTENT, newsContent)
+        startActivity(intent)
     }
 }

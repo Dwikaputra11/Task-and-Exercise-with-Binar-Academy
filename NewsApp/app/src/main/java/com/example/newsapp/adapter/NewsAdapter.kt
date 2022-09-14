@@ -14,15 +14,25 @@ import kotlinx.android.synthetic.main.news_item.view.*
 class NewsAdapter(private var newsList:  ArrayList<News>): RecyclerView.Adapter<NewsAdapter.ViewHolder>() {
 
     private lateinit var context: Context
+    private lateinit var listener: OnItemClickListener
 
-    interface OnItemClickListenr{
-        fun onItemClick()
+    interface OnItemClickListener{
+        fun onItemClick(id: Int)
     }
-    class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+    fun setOnItemClickListener(listener: OnItemClickListener){
+        this.listener = listener
+    }
+    inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         var ivNews = itemView.ivNews
         var tvTitle = itemView.tvTitleNews
         var tvEditor = itemView.tvEditor
         var tvDate = itemView.tvDate
+
+        init {
+            itemView.setOnClickListener {
+                listener.onItemClick(newsList[adapterPosition].id)
+            }
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
