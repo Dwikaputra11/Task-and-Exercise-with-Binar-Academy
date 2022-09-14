@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="news"
+            type="com.example.latihandatabinding.data.News" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        android:layout_margin="10dp"
+        app:cardElevation="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ivNewsItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    app:imageResource='@{news.image}'
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Image" />
+
+            <TextView
+                android:padding="10dp"
+                android:layout_below="@id/ivNewsItem"
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text='@{news.title}' />
+
+            <TextView
+                android:padding="10dp"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/tvTitle"
+                android:id="@+id/tvImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{news.date}" />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

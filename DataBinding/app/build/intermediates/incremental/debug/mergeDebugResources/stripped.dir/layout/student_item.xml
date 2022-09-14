@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                        
+
+    
+                 
+                          
+                                                                    
+           
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:tag="layout/student_item_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivImage"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="binding_1"           
+                />
+
+            <TextView
+                android:layout_below="@id/ivImage"
+                android:text="Name"                             
+                android:id="@+id/tvNameStudent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"  android:tag="binding_2"/>
+
+            <TextView
+                android:layout_below="@id/ivImage"
+                android:id="@+id/tvNimStudent"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NIM"                              android:tag="binding_3"/>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+         

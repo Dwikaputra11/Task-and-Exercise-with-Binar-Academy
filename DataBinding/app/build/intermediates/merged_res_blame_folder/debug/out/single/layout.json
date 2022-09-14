@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "C:\\Users\\Dwika\\.gradle\\daemon\\7.3.3\\com.example.databinding.app-mergeDebugResources-30:\\layout\\item_list.xml",
+        "source": "C:\\Users\\Dwika\\.gradle\\daemon\\7.3.3\\com.example.databinding.app-main-33:\\layout\\item_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dwika\\.gradle\\daemon\\7.3.3\\com.example.databinding.app-mergeDebugResources-30:\\layout\\activity_user.xml",
+        "source": "C:\\Users\\Dwika\\.gradle\\daemon\\7.3.3\\com.example.databinding.app-main-33:\\layout\\activity_user.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dwika\\.gradle\\daemon\\7.3.3\\com.example.databinding.app-mergeDebugResources-30:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\Dwika\\.gradle\\daemon\\7.3.3\\com.example.databinding.app-main-33:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dwika\\.gradle\\daemon\\7.3.3\\com.example.databinding.app-mergeDebugResources-30:\\layout\\student_item.xml",
+        "source": "C:\\Users\\Dwika\\.gradle\\daemon\\7.3.3\\com.example.databinding.app-main-33:\\layout\\student_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dwika\\.gradle\\daemon\\7.3.3\\com.example.databinding.app-mergeDebugResources-30:\\layout\\activity_student.xml",
+        "source": "C:\\Users\\Dwika\\.gradle\\daemon\\7.3.3\\com.example.databinding.app-main-33:\\layout\\activity_student.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dwika\\.gradle\\daemon\\7.3.3\\com.example.databinding.app-mergeDebugResources-30:\\layout\\fragment_detail.xml",
+        "source": "C:\\Users\\Dwika\\.gradle\\daemon\\7.3.3\\com.example.databinding.app-main-33:\\layout\\fragment_detail.xml"
+    },
+    {
+        "merged": "com.example.databinding.app-mergeDebugResources-30:/layout/student_item.xml",
+        "source": "com.example.databinding.app-main-33:/layout/student_item.xml"
+    }
+]
