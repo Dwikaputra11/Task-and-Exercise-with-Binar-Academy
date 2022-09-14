@@ -32,20 +32,29 @@ class HomeFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        setView()
         viewParent = view
         newsVM = ViewModelProvider(this)[NewsViewModel::class.java]
         newsVM.getNewsData()
+        newsVM.getHeadlinesData()
         newsVM.newsListLiveData.observe(viewLifecycleOwner, Observer {
             newsAdapter.setNewsData(it as ArrayList<News>)
         })
+        newsVM.headlineListLiveData.observe(viewLifecycleOwner, Observer {
+            viewPagerAdapter.setHeadlineNewsData(it as ArrayList<News>)
+        })
+        setView()
     }
 
     private fun setView(){
-        viewPagerAdapter = HeadlineViewPager(requireContext())
+        viewPagerAdapter = HeadlineViewPager(ArrayList())
         vpHeadline.orientation = ViewPager2.ORIENTATION_HORIZONTAL
         vpHeadline.offscreenPageLimit = 3
         vpHeadline.adapter = viewPagerAdapter
+        viewPagerAdapter.setOnItemClickListener(object: HeadlineViewPager.OnItemClickListener{
+            override fun onItemClick(id: Int) {
+                moveToContentNews(id, "headline")
+            }
+        })
         vpHeadline.setPageTransformer(MarginPageTransformer(50))
         vpHeadline.clipToPadding = false;
         vpHeadline.setPadding(10,10,10,0);
@@ -55,15 +64,21 @@ class HomeFragment : Fragment() {
         rvNews.adapter = newsAdapter
         newsAdapter.setOnItemClickListener(object : NewsAdapter.OnItemClickListener{
             override fun onItemClick(id: Int) {
-                moveToContentNews(id)
+                moveToContentNews(id, "news")
             }
         })
     }
 
-    fun moveToContentNews(id: Int){
-        val newsContent = newsVM.newsListLiveData.value?.first {
-            it.id == id
-        } as News
+    fun moveToContentNews(id: Int, key_word:String ){
+        val newsContent = if(key_word == "headline"){
+            newsVM.headlineListLiveData.value?.first{
+                it.id == id
+            } as News
+        }else{
+            newsVM.newsListLiveData.value?.first {
+                it.id == id
+            } as News
+        }
         val bundle = Bundle()
         bundle.putParcelable(DetailNewsFragment.NEWS_CONTENT, newsContent)
         Navigation.findNavController(viewParent).navigate(R.id.action_homeFragment_to_detailNewsFragment,bundle)

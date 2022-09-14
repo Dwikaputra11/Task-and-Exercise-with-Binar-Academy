@@ -12,20 +12,32 @@ import com.example.newsapp.data.News
 import kotlinx.android.synthetic.main.headline_news.view.*
 
 
-class HeadlineViewPager(private var context: Context):
+class HeadlineViewPager(private var headlineNewsList: ArrayList<News>):
     RecyclerView.Adapter<HeadlineViewPager.ViewHolder>() {
-    class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+
+    lateinit var listener: OnItemClickListener
+    private lateinit var context: Context
+    interface OnItemClickListener{
+        fun onItemClick(id: Int)
+    }
+
+    fun setOnItemClickListener(listener: OnItemClickListener){
+        this.listener = listener
+    }
+
+
+    inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         var title = itemView.tvTitleHeadline
-        var content = itemView.tvContentHeadline
         var date = itemView.tvDateHeadline
         var img = itemView.ivHeadline
         var editor = itemView.tvEditorHeadline
+
+        init {
+            itemView.setOnClickListener {
+                listener.onItemClick(headlineNewsList[adapterPosition].id)
+            }
+        }
     }
-    private val headlineNews = arrayListOf<News>(
-        News(id = 1,title = "Imigrasi Resmi Cegah Lukas Enembe ke Luar Negeri!", editor = "Andhika Prasetia", imgUrl = "https://akcdn.detik.net.id/community/media/visual/2019/08/26/ec2e42a6-6705-4e0d-99f1-738b6a8c921b_169.jpeg?w=700&q=90", date = "12 Sep 2022", content = ""),
-        News(id = 2,title = "Imigrasi Resmi Cegah Lukas Enembe ke Luar Negeri!", editor = "Andhika Prasetia", imgUrl = "https://akcdn.detik.net.id/community/media/visual/2019/08/26/ec2e42a6-6705-4e0d-99f1-738b6a8c921b_169.jpeg?w=700&q=90", date = "12 Sep 2022", content = ""),
-        News(id = 3,title = "Imigrasi Resmi Cegah Lukas Enembe ke Luar Negeri!", editor = "Andhika Prasetia", imgUrl = "https://akcdn.detik.net.id/community/media/visual/2019/08/26/ec2e42a6-6705-4e0d-99f1-738b6a8c921b_169.jpeg?w=700&q=90", date = "12 Sep 2022", content = ""),
-    )
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.headline_news, parent, false)
@@ -34,21 +46,25 @@ class HeadlineViewPager(private var context: Context):
                 ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.MATCH_PARENT
             )
+        context = parent.context
         return ViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         Glide.with(context)
-            .load(headlineNews[position].imgUrl)
+            .load(headlineNewsList[position].imgUrl)
             .placeholder(R.mipmap.ic_launcher_round)
             .into(holder.img.ivHeadline)
-        holder.title.text = headlineNews[position].title
-        holder.content.text = headlineNews[position].content
-        holder.date.text = headlineNews[position].date
-        holder.editor.text = headlineNews[position].editor
+        holder.title.text = headlineNewsList[position].title
+        holder.date.text = headlineNewsList[position].date
+        holder.editor.text = headlineNewsList[position].editor
     }
 
     override fun getItemCount(): Int {
-        return headlineNews.size
+        return headlineNewsList.size
+    }
+
+    fun setHeadlineNewsData(headlineNewsList: ArrayList<News>){
+        this.headlineNewsList = headlineNewsList
     }
 }

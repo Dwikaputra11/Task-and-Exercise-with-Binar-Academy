@@ -32,13 +32,6 @@
                 android:textSize="24sp"
                 />
             <TextView
-                android:id="@+id/tvContentHeadline"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Description"
-                android:maxEms="25"
-                />
-            <TextView
                 android:id="@+id/tvEditorHeadline"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
