@@ -5,8 +5,11 @@
       <map>
         <entry key="..\:/dev/AndroidStudioProjects/Binar Academy/Tugas dan Latihan/NewsApp/app/src/main/res/drawable/rect_radius.xml" value="0.1" />
         <entry key="..\:/dev/AndroidStudioProjects/Binar Academy/Tugas dan Latihan/NewsApp/app/src/main/res/layout/activity_main.xml" value="0.176" />
+        <entry key="..\:/dev/AndroidStudioProjects/Binar Academy/Tugas dan Latihan/NewsApp/app/src/main/res/layout/activity_news_content.xml" value="0.264" />
+        <entry key="..\:/dev/AndroidStudioProjects/Binar Academy/Tugas dan Latihan/NewsApp/app/src/main/res/layout/fragment_detail_news.xml" value="0.10416666666666667" />
+        <entry key="..\:/dev/AndroidStudioProjects/Binar Academy/Tugas dan Latihan/NewsApp/app/src/main/res/layout/fragment_home.xml" value="0.10416666666666667" />
         <entry key="..\:/dev/AndroidStudioProjects/Binar Academy/Tugas dan Latihan/NewsApp/app/src/main/res/layout/headline_news.xml" value="0.264" />
-        <entry key="..\:/dev/AndroidStudioProjects/Binar Academy/Tugas dan Latihan/NewsApp/app/src/main/res/layout/news_item.xml" value="0.291005291005291" />
+        <entry key="..\:/dev/AndroidStudioProjects/Binar Academy/Tugas dan Latihan/NewsApp/app/src/main/res/layout/news_item.xml" value="0.1" />
       </map>
     </option>
   </component>
