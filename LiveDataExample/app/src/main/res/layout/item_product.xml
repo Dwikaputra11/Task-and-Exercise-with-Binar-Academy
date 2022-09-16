@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="product"
+            type="com.example.livedataexample.data.Product" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivProduct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:imageResource='@{product.img}'
+                android:layout_centerVertical="true" />
+
+            <TextView
+                android:paddingStart="20dp"
+                android:id="@+id/tvName"
+                android:paddingVertical="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text='@{product.name, default= "Name Product"}'
+                android:textColor="@color/black"
+                android:layout_toEndOf="@id/ivProduct" />
+
+            <TextView
+                android:id="@+id/tvStock"
+                android:paddingStart="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text='@{Integer.toString(product.stock), default= "Stock"}'
+                android:layout_below="@id/tvName"
+                android:layout_toEndOf="@id/ivProduct"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvPrice"
+                android:text="@{'$' + String.valueOf(product.price)}"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="20dp"
+                android:layout_alignParentEnd="true"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
