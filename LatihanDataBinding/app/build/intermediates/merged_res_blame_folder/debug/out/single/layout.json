@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "C:\\Users\\Dwika\\.gradle\\daemon\\7.3.3\\com.example.latihandatabinding.app-mergeDebugResources-46:\\layout\\fragment_news.xml",
+        "source": "C:\\Users\\Dwika\\.gradle\\daemon\\7.3.3\\com.example.latihandatabinding.app-main-49:\\layout\\fragment_news.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dwika\\.gradle\\daemon\\7.3.3\\com.example.latihandatabinding.app-mergeDebugResources-46:\\layout\\news_item.xml",
+        "source": "C:\\Users\\Dwika\\.gradle\\daemon\\7.3.3\\com.example.latihandatabinding.app-main-49:\\layout\\news_item.xml"
+    },
+    {
+        "merged": "com.example.latihandatabinding.app-mergeDebugResources-46:/layout/fragment_news.xml",
+        "source": "com.example.latihandatabinding.app-main-49:/layout/fragment_news.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dwika\\.gradle\\daemon\\7.3.3\\com.example.latihandatabinding.app-mergeDebugResources-46:\\layout\\fragment_detail_news.xml",
+        "source": "C:\\Users\\Dwika\\.gradle\\daemon\\7.3.3\\com.example.latihandatabinding.app-main-49:\\layout\\fragment_detail_news.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dwika\\.gradle\\daemon\\7.3.3\\com.example.latihandatabinding.app-mergeDebugResources-46:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\Dwika\\.gradle\\daemon\\7.3.3\\com.example.latihandatabinding.app-main-49:\\layout\\activity_main.xml"
+    }
+]
