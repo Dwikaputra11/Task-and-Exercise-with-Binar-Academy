@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">UIDesign</string>
+    <string name="input_username">Input Username</string>
+    <string name="how_are_you">How Are You?</string>
+    <string name="input_name">Input Name</string>
+    <string name="english" translatable="false">English</string>
+    <string name="indonesia" translatable="false">Indonesia</string>
+    <string name="input_a_word">Input a Word</string>
+    <string name="your_word">Your Word</string>
+    <string name="translate">Translate</string>
+    <string name="next_page">Next Page</string>
+</resources>

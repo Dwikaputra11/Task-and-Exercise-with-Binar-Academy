@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/dev/AndroidStudioProjects/Binar Academy/Tugas dan Latihan/RetrofitExample/app/src/main/res/layout/activity_add_car.xml" value="0.1" />
+        <entry key="..\:/dev/AndroidStudioProjects/Binar Academy/Tugas dan Latihan/RetrofitExample/app/src/main/res/layout/activity_car.xml" value="0.22735507246376813" />
         <entry key="..\:/dev/AndroidStudioProjects/Binar Academy/Tugas dan Latihan/RetrofitExample/app/src/main/res/layout/activity_main.xml" value="0.22735507246376813" />
+        <entry key="..\:/dev/AndroidStudioProjects/Binar Academy/Tugas dan Latihan/RetrofitExample/app/src/main/res/layout/activity_update.xml" value="0.1" />
+        <entry key="..\:/dev/AndroidStudioProjects/Binar Academy/Tugas dan Latihan/RetrofitExample/app/src/main/res/layout/car_item.xml" value="0.22735507246376813" />
         <entry key="..\:/dev/AndroidStudioProjects/Binar Academy/Tugas dan Latihan/RetrofitExample/app/src/main/res/layout/fragment_home.xml" value="0.22735507246376813" />
       </map>
     </option>

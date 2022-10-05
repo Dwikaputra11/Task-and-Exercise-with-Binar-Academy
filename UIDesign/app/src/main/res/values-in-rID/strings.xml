@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">UIDesign</string>
+    <string name="input_name">Masukkan Nama</string>
+    <string name="input_username">Masukkan Username</string>
+    <string name="how_are_you">Apa  Kabar?</string>
+    <string name="input_a_word">Masukkan Kata</string>
+    <string name="your_word">Kata Anda</string>
+    <string name="translate">Terjemah</string>
+</resources>
