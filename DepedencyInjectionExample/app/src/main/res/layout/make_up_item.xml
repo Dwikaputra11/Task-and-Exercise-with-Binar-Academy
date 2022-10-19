@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="4dp"
+    android:layout_margin="10dp"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civMakeUp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+
+        <TextView
+            android:id="@+id/tvBrand"
+            android:layout_toEndOf="@id/civMakeUp"
+            android:layout_width="wrap_content"
+            android:text="Brand"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvNameProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Product Name"
+            android:layout_below="@id/tvBrand"
+            android:layout_toEndOf="@id/civMakeUp"
+            />
+        <TextView
+            android:id="@+id/tvCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Categroy"
+            android:layout_below="@id/tvNameProduct"
+            android:layout_toEndOf="@id/civMakeUp"
+            />
+
+    </RelativeLayout>
+
+
+
+</androidx.cardview.widget.CardView>
