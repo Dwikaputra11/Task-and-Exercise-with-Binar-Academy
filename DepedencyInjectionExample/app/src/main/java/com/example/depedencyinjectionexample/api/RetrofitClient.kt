@@ -13,7 +13,7 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object RetrofitClient {
-    const val BASE_URL = "http://makeup-api.herokuapp.com/api/v1/"
+    private const val BASE_URL = "http://makeup-api.herokuapp.com/api/v1/"
 
     private val interceptor: HttpLoggingInterceptor
     get(){
