@@ -9,4 +9,7 @@ interface ApiResponse {
     @GET("admin/car")
     fun getAllCar(): Call<List<CarResponseItem>>
 
+    @GET("admin/car")
+    fun getCar(): List<CarResponseItem>
+
 }
